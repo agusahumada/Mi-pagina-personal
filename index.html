@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./styles.css">
+    <title>Agus-Ahumada</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./circle.css">
+    <link rel="stylesheet" href="./styles/circle.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 <body>
     <section id="Agus-Ahumada" class="presentacion">
@@ -23,7 +24,7 @@
         <header>
             <nav>
                 <p>
-                    <a class="nombre-principal" href="#Agus-Ahumada">Agus Ahumada</a>
+                    <a class="nombre-principal" href="#Agus-Ahumada">AGUS AHUMADA</a>
                 </p>
                 <ul>
                     <li><a class="middle" href="#sobre-mi">SOBRE MI</a></li>
@@ -200,19 +201,18 @@
                  </section>
             <section id="contacto" class="contacto">
                 <h2 class="subtitulo borde-blanco">Contacto</h2>
-                <div class="fuenteNegra">
-                    <p>direccion</p>
-                    <p>email</p>
-                    <p>telefono</p>
-                </div>
                     <p>Dejame un mensaje</p>
-                        <form action="" onsubmit="">
-                            <input type="text" id="nombre" name="Nombre" value="" placeholder="Nombre">
-                            <input type="text" id="correo" name="Correo" value="" placeholder="Email">
-                            <textarea name="mensaje" id="mensaje" cols="8" rows="4" placeholder="Mensaje"></textarea>
-                             <input class="boton" type="Submit" value="Enviar">
+                        <form action="" method="post" onsubmit="" id="form">
+                            <input type="text" id="nombre" name="Nombre" value="" placeholder="Nombre" required>
+                            <input type="text" id="correo" name="Correo" value="" placeholder="Correo" required>
+                            <textarea name="mensaje" id="mensaje" cols="8" rows="4" placeholder="Mensaje" required></textarea>
+                             <input class="boton" type="submit" formtarget="_blank" value="Enviar">
+                             <div>
+                                 <p class="warnings" id="warnings"></p>
+
+                             </div>
                         </form>
             </section>
-    <script src="/js/app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
